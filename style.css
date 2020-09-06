@@ -45,10 +45,35 @@ body {
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 }
 
-/* .container > * {
-    padding: 40px;
-    font-size: 3rem;
-} */
+/* Typography */
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+}
+
+.heading-1 {
+    
+}
+
+.heading-2 {
+    
+}
+
+.heading-3 {
+    
+}
+
+.heading-4 {
+    font-size: 1.9rem;
+}
+
+.light {
+    color: var(--clr-light-100);
+}
+
+.dark {
+    color: var(--clr-dark-100);
+}
 
 /* Sidebar */
 .sidebar {
@@ -74,9 +99,33 @@ body {
 
 /* Features */
 .features {
-    background-color: var(--clr-light-200);
+    margin: 15rem 0;
 
     grid-column: center-start / center-end;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    align-items: start;
+    gap: 6rem;
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    row-gap: 1.5rem;
+    column-gap: 2.5rem;
+}
+
+.feature__icon {
+    fill: var(--clr-primary);
+    width: 4.5rem;
+    height: 4.5rem;
+    grid-row: 1 / span 2;
+    transform: translateY(-1rem);
+}
+
+.feature__text {
+    font-size: 1.7rem;
 }
 
 /* Story */
